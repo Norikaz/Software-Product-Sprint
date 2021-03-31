@@ -11,5 +11,15 @@
       <h1>Infectious Disease Tracking Platform</h1>
       <p>This SPS Spring 2021 Team 5 Project</p>
     </div>
+    <form action="/new-task" method="POST">
+    <input type="text" name="paitent_name" placeholder="Full Name" pattern="[a-zA-Z]+.{2,}" required="true">
+    <br>
+    <input type="text" name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="true">   
+    <br>   
+      <input type="text" name="zip_code" placeholder="Zip Code" pattern="[0-9]+.{4}" maxlength="5" required="true" title="Must be a 5 digit code">
+    <br> 
+    <!-- //oninvalid="setCustomValidity('Must be 5 digits')" -->
+    <button>Submit</button>
+    </form>
   </body>
 </html>
