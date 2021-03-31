@@ -1,9 +1,165 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+*{
+    /* this adds the margin, padding, and border inside the width of an element. */
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+}
+body{
+    /* background-color: #216869; */
+    /* background-color: #32936F; */
+    background-color: #cad2c5;
+    height: 100vh;
+}
+header{
+    display: flex;
+    position: relative;
+    height: 10vh;
+    /* horizontally */
+    justify-content: center;
+    /* vetically */
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* for the circle to fit */
+    height: 10vh;
+    background-color: #F96F5D;
+
+}
+.setting{
+    display: flex;
+    font-size: 2.7em;
+    padding: 0.1em 0.1em;
+    border-radius: 50%;
+    z-index: 2;
+    margin-left: 0.5em;
+    transition: 2s;
+}
+.setting img{
+    width: 40px;
+    height: 40px;
 }
 
-#greeting-container {
-  margin-top: 20px;
+.setting:hover{
+    cursor: pointer;
+    transform: rotate(180deg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #DBF9B8;
+    color:#F96F5D;
 }
+.setting.rotate{
+    transform: translateX(42.1rem) rotate(180deg);
+    background-color:#DBF9B8;
+}
+
+#layout{
+    font-size: 2.7em;
+    padding: 0.1em 0.3em;
+    border-radius: 50%;
+}
+
+.link-container{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    list-style: none;
+    background-color: #231B1B;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+.link-container li a{
+    color:#DBF9B8;
+    text-decoration: none;
+    font-size: 16px;  
+}
+.link-container li{
+    transition: 1s;
+}
+.link-container li:hover{
+    transform: skewX( -10deg ) translateX( 10px );
+}
+
+.landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+main h1{
+    /* you put the transition out of the hover, so it also transitions when you are outside of the element */
+    transition: 1s;
+}
+main h1:hover{
+    /* Found this movement on a website */
+    transform: skewX( -10deg ) translateX( 10px );
+}
+
+
+/* setting tab when its clicked */
+.settings-page{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F96F5D;
+    height: 100vh;
+    width: 100%;
+    list-style: none;
+    /* display: none; */
+    /* right point */
+    clip-path: circle(100px at 2%  -3%);
+    -webkit-clip-path: circle(100px at 2%  -3%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+}
+.settings-page.open {
+    clip-path: circle(2000px at 2%  -3%);
+    -webkit-clip-path: circle(2000px at 2%  -3%);
+    pointer-events: all;
+}
+
+.settings-page li a{
+    z-index: 3;
+    color:black;
+    text-decoration: none;
+    font-size: 16px;  
+    font-size: 25px;
+}
+
+.settings-page li{
+    opacity: 0;
+    transition: 1s;
+}
+.settings-page li:hover{
+    transform: skewX( -10deg ) translateX( 10px );
+}
+
+.settings-page li:nth-child(1){
+    transition: all 0.5s ease 0.2s;
+}
+.settings-page li:nth-child(2){
+    transition: all 0.5s ease 0.4s;
+}
+.settings-page li:nth-child(3){
+    transition: all 0.5s ease 0.6s;
+}
+li.fade{
+    opacity: 1;
+}
+
+
+/* form css */
+
+form{
+    background-color: white;
+    padding: 5rem 10rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15%;
+
+}
+
