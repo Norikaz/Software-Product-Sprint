@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <ul class="settings-page">
+        <li><a href="">Account</a></li>
+        <li><a href="">Logout</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+
+    <header>
+        <span class="setting"><img src="images/settings.png" alt="settings"></span>
+        <ul class="link-container">
+            <li><a href="index.html">Hotspot Map</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </header>
+    
+    <main class="landing">
+        <h1>Patient's information</h1>
+        <br>
+        <form action="/new-task" method="POST">
+            <label for="fname">Name:</label><br>
+                <input type="text" id="fname" name="paitent_name" placeholder="Full Name" pattern="[a-zA-Z]+.{2,}" required="true"><br>
+                        
+            <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="true"><br>
+            
+            <label for="email">Location:</label><br>
+
+            <label for="start">Date:</label> <br>
+                <input type="date" id="start" name="date" value="2019-12-22" min="2021-01-01" max="2030-12-31"> <br>
+
+            <label for="reason">Disease:</label><br>
+                <select id="reason" name="reason">
+                    <option value="covid">covid-19</option>
+                    <option value="disease2">disease2</option>
+                    <option value="disease3">disease3</option>
+                </select> 
+            <br>
+            <label for="adition">Additional information:</label><br>
+                <textarea id="adition" name="adition" placeholder="Additional information here.." style="height:200px"></textarea>
+            <br>
+            <input type="submit" />
+        </form>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

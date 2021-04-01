@@ -22,8 +22,9 @@ public class NewTaskServlet extends HttpServlet {
     // Sanitize user input to remove HTML tags and JavaScript.
     String paitent_name = Jsoup.clean(request.getParameter("paitent_name"), Whitelist.none());
     String email = Jsoup.clean(request.getParameter("email"), Whitelist.none());
-    int zip_code = Integer.parseInt(Jsoup.clean(request.getParameter("zip_code"), Whitelist.none()));
     long timestamp = System.currentTimeMillis();
+    String date = Jsoup.clean(request.getParameter("date"), Whitelist.none());
+    String reason = Jsoup.clean(request.getParameter("reason"), Whitelist.none());
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
@@ -32,7 +33,8 @@ public class NewTaskServlet extends HttpServlet {
             .set("paitent_name", paitent_name)
             .set("timestamp", timestamp)
             .set("email", email)
-            .set("zip_code", zip_code)
+            .set("date", date)
+            .set("reason", reason)
             .build();
     datastore.put(taskEntity);
 

@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Team 5 Project</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Tracker</title>
     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="settings-page">
+        <li><a href="">Account</a></li>
+        <li><a href="">Logout</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+    <header>
+        <span class="setting"><img src="images/settings.png" alt="settings"></span>
+        <ul class="link-container">
+            <li><a href="index.html">Hotspot Map</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </header>
+    
+    <main class="landing">
+        <h1>maps image</h1>
+    </main>
+
     <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>Infectious Disease Tracking Platform</h1>
-      <p>This SPS Spring 2021 Team 5 Project</p>
-    </div>
-    <form action="/new-task" method="POST">
-    <input type="text" name="paitent_name" placeholder="Full Name" pattern="[a-zA-Z]+.{2,}" required="true">
-    <br>
-    <input type="text" name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="true">   
-    <br>   
-      <input type="text" name="zip_code" placeholder="Zip Code" pattern="[0-9]+.{4}" maxlength="5" required="true" title="Must be a 5 digit code">
-    <br> 
-    <!-- //oninvalid="setCustomValidity('Must be 5 digits')" -->
-    <button>Submit</button>
-    </form>
-  </body>
+</body>
 </html>
