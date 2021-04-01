@@ -27,20 +27,17 @@
     <main class="landing">
         <h1>Patient's information</h1>
         <br>
-        <form action="/form-handler" method="POST">
+        <form action="/new-task" method="POST">
             <label for="fname">Name:</label><br>
-                <input type="text" id="fname" name="firstname" placeholder="Patient's First Name.."><br>
-
-            <label for="lname">Last Name:</label><br>
-                <input type="text" id="lname" name="lastname" placeholder="Patient's Last Name.."><br>
+                <input type="text" id="fname" name="paitent_name" placeholder="Full Name" pattern="[a-zA-Z]+.{2,}" required="true"><br>
                         
             <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email" placeholder="Patient's email contact.."><br>
+                <input type="text" id="email" name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="true"><br>
             
             <label for="email">Location:</label><br>
 
             <label for="start">Date:</label> <br>
-                <input type="date" id="start" name="trip-start" value="2019-12-22" min="2021-01-01" max="2030-12-31"> <br>
+                <input type="date" id="start" name="date" value="2019-12-22" min="2021-01-01" max="2030-12-31"> <br>
 
             <label for="reason">Disease:</label><br>
                 <select id="reason" name="reason">
