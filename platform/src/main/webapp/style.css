@@ -97,6 +97,9 @@ main h1:hover{
     transform: skewX( -10deg ) translateX( 10px );
 }
 
+main #map {
+    height:100vh;
+}
 
 /* setting tab when its clicked */
 .settings-page{
@@ -151,6 +154,7 @@ main h1:hover{
 li.fade{
     opacity: 1;
 }
+
 
 
 /* form css */
