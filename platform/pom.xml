@@ -16,7 +16,7 @@
 
     <!-- Project-specific properties -->
     <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
-    <googleCloudProjectId>team-test-sps</googleCloudProjectId>
+    <googleCloudProjectId>dushyanthsc-sps-spring21</googleCloudProjectId>
   </properties>
 
   <dependencies>
