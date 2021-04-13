@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 *{
     /* this adds the margin, padding, and border inside the width of an element. */
     box-sizing: border-box; 
@@ -9,6 +11,7 @@ body{
     /* background-color: #32936F; */
     background-color: #cad2c5;
     height: 100vh;
+    font-family: 'Rubik', sans-serif;
 }
 header{
     display: flex;
@@ -108,6 +111,7 @@ main h1:hover{
 }
 main #feed{
     display: flex;
+    flex-direction: column;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 15%;
@@ -117,6 +121,15 @@ main #feed{
     width:30%;
     margin: 2em 2em;
 }
+
+main h1 {
+    margin-bottom: 20px;
+}
+
+main #feed .feed-item {
+    margin-bottom: 15px;
+}
+
 main #map {
     width: 95%;
     height: 95%;
