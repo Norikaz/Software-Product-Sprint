@@ -26,11 +26,12 @@ header{
 }
 .setting{
     display: flex;
+    position: absolute;
     font-size: 2.7em;
     padding: 0.1em 0.1em;
     border-radius: 50%;
     z-index: 2;
-    margin-left: 0.5em;
+    margin: 0.5em 0.5em;
     transition: 2s;
 }
 .setting img{
@@ -46,8 +47,9 @@ header{
     color:#F96F5D;
 }
 .setting.rotate{
-    transform: translateX(42.1rem) rotate(180deg);
-    background-color:#DBF9B8;
+    transform: translateX(47.98vw) rotate(180deg);
+    margin: 0.5em 0;
+    background-color: #DBF9B8;
 }
 
 #layout{
@@ -86,7 +88,15 @@ header{
 }
 main{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:90vh;
+}
+main #form-main{
+    display: flex;
     flex-direction: column;
+    height:90vh;
 }
 main h1{
     /* you put the transition out of the hover, so it also transitions when you are outside of the element */
@@ -96,9 +106,33 @@ main h1:hover{
     /* Found this movement on a website */
     transform: skewX( -10deg ) translateX( 10px );
 }
-
+main #feed{
+    display: flex;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15%;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width:30%;
+    margin: 2em 2em;
+}
 main #map {
-    height:100vh;
+    width: 95%;
+    height: 95%;
+    /* padding: 5rem 10rem; */
+    border-radius: 5%;
+}
+main #map-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    background-color: white;
+    margin: 2em 2em;
 }
 
 /* setting tab when its clicked */
@@ -121,8 +155,8 @@ main #map {
     pointer-events: none;
 }
 .settings-page.open {
-    clip-path: circle(2000px at 2%  -3%);
-    -webkit-clip-path: circle(2000px at 2%  -3%);
+    clip-path: circle(4000px at 2%  -3%);
+    -webkit-clip-path: circle(4000px at 2%  -3%);
     pointer-events: all;
 }
 

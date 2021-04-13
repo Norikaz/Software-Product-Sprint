@@ -326,12 +326,48 @@ contentString = `<p> <h3>${finalData.state}</h3><br/>
 const infowindow = new google.maps.InfoWindow({
     content: contentString,
 });
-
+ if(finalData.todayCases >= 1000){
+    const circle = new google.maps.Circle({
+        strokeColor: "#FF0000",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#FF0000",
+        fillOpacity: 0.35,
+        map,
+        center: myLatLng,
+        radius: Math.sqrt(finalData.todayCases) * 5500,
+    });
+ }
+ else if(finalData.todayCases >= 500){
+    const circle = new google.maps.Circle({
+        strokeColor: "#F5853F",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#F5853F",
+        fillOpacity: 0.35,
+        map,
+        center: myLatLng,
+        radius: Math.sqrt(finalData.todayCases) * 5500,
+    });
+ }
+ else{
+    const circle = new google.maps.Circle({
+        strokeColor: "#F5FF90",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#F5FF90",
+        fillOpacity: 0.35,
+        map,
+        center: myLatLng,
+        radius: Math.sqrt(finalData.todayCases) * 5500,
+    });
+ }
 const marker = new google.maps.Marker({
     position: myLatLng,
     map,
     title: displayLL[i][0].state,
-}); 
+});
+
 marker.addListener("click", () => {
     infowindow.open(map, marker);
 });   

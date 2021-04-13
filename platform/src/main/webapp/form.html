@@ -14,9 +14,9 @@
         <li><a href="">Logout</a></li>
         <li><a href="">Contact</a></li>
     </ul>
-
+    <span class="setting"><img src="images/settings.png" alt="settings"></span>
     <header>
-        <span class="setting"><img src="images/settings.png" alt="settings"></span>
+        
         <ul class="link-container">
             <li><a href="index.html">Hotspot Map</a></li>
             <li><a href="form.html">Form</a></li>
@@ -24,10 +24,9 @@
         </ul>
     </header>
     
-    <main class="landing">
-        <h1>Patient's information</h1>
-        <br>
+    <main class="landing" id="form-main">
         <form action="/new-task" method="POST">
+            <h1>Patient's information</h1>
             <label for="fname">Name:</label><br>
                 <input type="text" id="fname" name="paitent_name" placeholder="Full Name" pattern="[a-zA-Z]+.{2,}" required="true"><br>
                         

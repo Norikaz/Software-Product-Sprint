@@ -15,21 +15,27 @@
         <li><a href="">Logout</a></li>
         <li><a href="">Contact</a></li>
     </ul>
+    <span class="setting"><img src="images/settings.png" alt="settings"></span>
+
     <header>
-        <span class="setting"><img src="images/settings.png" alt="settings"></span>
         <ul class="link-container">
             <li><a href="index.html">Hotspot Map</a></li>
             <li><a href="form.html">Form</a></li>
             <li><a href="">About</a></li>
         </ul>
     </header>
+
     <main>
-      <div id="map"></div>
-      <script
-      src=https://maps.googleapis.com/maps/api/js?key=AIzaSyAX661BPenmJf7KZPMB2fA4HEisIBNpYgw&callback=initMap&libraries=&v=weekly
-      >
-    </script>
+        <div id="feed">
+            <h1>News Feed</h1>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+        <script src=https://maps.googleapis.com/maps/api/js?key=AIzaSyAX661BPenmJf7KZPMB2fA4HEisIBNpYgw&callback=initMap&libraries=&v=weekly></script>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
