@@ -275,6 +275,36 @@ chosen.push(chose);
 //corona.lmao.ninja
 let dispData = [];
 
+const nyCall = (i) => {
+const infoFetch = fetch(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=coronavirus&api-key=GrTkolGasHBWb7LDyC4CVGeQ6AYMs3wf&fq=glocations:("${chosen[i].toUpperCase()}")`)
+.then(response => response.json())
+.then(info => {
+    return info;
+});
+ return infoFetch;
+}
+
+function createNewPost(postData){
+var newPost = document.createElement('div');
+newPost.className = 'feed-item';
+var headline = document.createElement('h3');
+var story = document.createElement('p')
+var fullArticle = document.createElement('a');
+fullArticle.target = '_blank';
+fullArticle.href = `${postData.response.docs[0].web_url}`;
+
+
+
+headline.innerText = postData.response.docs[0].headline.main;
+story.innerText = postData.response.docs[0].lead_paragraph;
+fullArticle.innerText = 'Read Article >';
+
+newPost.appendChild(headline);
+newPost.appendChild(story);
+newPost.appendChild(fullArticle);
+document.body.getElementsByTagName('main')[0].getElementsByTagName('div')[0].append(newPost)
+//newBar.append(newPost);
+}
 
 const fCall = (i) => {
  const myResponse = fetch(`https://disease.sh/v3/covid-19/states/${chosen[i]}`)
@@ -284,6 +314,7 @@ const fCall = (i) => {
   });
   return myResponse;
 }
+
 
 
 function latLongLookup(stateName){
@@ -309,6 +340,13 @@ let finalData;
 let stateData = await fCall(i).then(res => {
     finalData = res;
 });
+
+let postData;
+let postInfo = await nyCall(i).then(res => {
+    console.log(res);
+    postData = res;
+})
+createNewPost(postData);
 
 contentString = `<p> <h3>${finalData.state}</h3><br/>    
                     <ul><li>
