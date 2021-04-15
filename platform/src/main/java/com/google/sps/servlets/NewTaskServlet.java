@@ -22,6 +22,7 @@ public class NewTaskServlet extends HttpServlet {
     // Sanitize user input to remove HTML tags and JavaScript.
     String paitent_name = Jsoup.clean(request.getParameter("paitent_name"), Whitelist.none());
     String email = Jsoup.clean(request.getParameter("email"), Whitelist.none());
+    String state = Jsoup.clean(request.getParameter("state"), Whitelist.none());
     long timestamp = System.currentTimeMillis();
     String date = Jsoup.clean(request.getParameter("date"), Whitelist.none());
     String reason = Jsoup.clean(request.getParameter("reason"), Whitelist.none());
@@ -31,6 +32,7 @@ public class NewTaskServlet extends HttpServlet {
     FullEntity taskEntity =
         Entity.newBuilder(keyFactory.newKey())
             .set("paitent_name", paitent_name)
+            .set("state", state)
             .set("timestamp", timestamp)
             .set("email", email)
             .set("date", date)
@@ -40,4 +42,5 @@ public class NewTaskServlet extends HttpServlet {
 
     response.sendRedirect("/index.html");
   }
+  // write method to retretive data  Name and location(state);
 }
