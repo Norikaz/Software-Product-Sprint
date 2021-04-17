@@ -8,7 +8,18 @@ const stateNames = [
   'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 
   'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
 ];
-
+//@tariq in index.html theres a function call in the body tag this was for testing purposes aswell as the console log if 
+//you dont need it for testing just remove those
+function loadTasks() {
+    var StatesFromDatabase =[];
+    //adds states to the list 
+  fetch('/querytasks').then(response => response.json()).then((tasks) => {
+    tasks.forEach((task) => {
+      StatesFromDatabase.push(task)
+    })
+  });
+  console.log(StatesFromDatabase);
+}
 const latLong = [
   {
     "state":"Alaska",
