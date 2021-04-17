@@ -1,0 +1,30 @@
+
+
+h3 {
+    font-family: 'Lato', sans-serif;
+	font-size: 30px;
+	color: #000 !important;
+	text-align:center;
+}
+
+.background{
+	background: url("https://snworksceo.imgix.net/dpn/bf666ffe-74bf-46e6-a264-26c46af992cd.sized-1000x1000.png?w=1000");
+	overflow-x: hidden;
+  
+  background-position: top;
+
+}
+.logo{
+       width: 100%;
+        position:relative; 
+      top: 20px; 
+  left: -100px;
+
+}
+
+.white-backdrop{
+	background-color: #fff;
+    height: 100vh;
+    float: left;
+}
+
