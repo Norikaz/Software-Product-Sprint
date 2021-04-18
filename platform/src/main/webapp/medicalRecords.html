@@ -5,9 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Records</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="medicalrecords.css">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="createTask.js"></script>
 </head>
-<body>
-    <p>Fill in Database info to show medical institutions</p>
+<body onload="loadTasks()">
+        <header>
+        <ul class="link-container">
+            <li><a href="index.html">Hotspot Map</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </header>
+    <h1>Medical Records</h1>
+    <ul class="check-list" id="tasklist">
+        <li class="heading" style="content: none;">
+            <span>Email</span>
+            <span>State</span>
+            <span>Reason</span>
+        </li>
+    </ul>
+    
 </body>
