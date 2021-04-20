@@ -1,0 +1,122 @@
+*{
+    /* this adds the margin, padding, and border inside the width of an element. */
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+}
+body{
+    /* background-color: #216869; */
+    /* background-color: #32936F; */
+    background-color: #cad2c5;
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+}
+#task-list {
+  list-style-type: none;
+
+
+}
+
+.task {
+  border: thin solid black;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  width: 600px;
+    border-radius: 15px;
+  background: #bcc7a9;
+  height: 64px; 
+  	margin-left: auto; 
+	margin-right: auto;
+	
+
+}
+
+.task span {
+  flex-grow: 1;
+    font-family:sans-serif; 
+  color:#fff;
+  list-style:none;
+  position: relative;
+  padding-left:0px;
+  line-height: 2;
+  font-size:23px;
+  text-align:center;
+
+
+}
+h1 {
+  color:#fff;
+  text-align: center;
+  font-size: 60px;
+  font-family:sans-serif; 
+}
+
+.task:before {
+   content:"\f111"; 
+  left:0;
+  color:#ffffff;
+  font-size:24px;
+}
+
+.heading{
+    flex-flow: row wrap;
+    justify-content: space-around;
+   display: flex;
+   border: thin solid black;
+  margin: 10px;
+  padding: 10px;
+  width: 600px;
+    border-radius: 15px;
+  background: #bcc7a9;
+  height: 64px; 
+  	margin-left: auto; 
+	margin-right: auto;
+    font-family:sans-serif; 
+  color:#fff;
+  list-style:none;
+  padding-left:0px;
+  line-height: 2;
+  font-size:23px;
+  text-align:center;
+
+
+}
+li:hover:before {
+  color:#d05454;
+}
+header{
+    display: flex;
+    position: relative;
+    height: 10vh;
+    /* horizontally */
+    justify-content: center;
+    /* vetically */
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* for the circle to fit */
+    height: 10vh;
+    background-color: #F96F5D;
+
+}
+.link-container{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    list-style: none;
+    background-color: #231B1B;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+.link-container li a{
+    color:#DBF9B8;
+    text-decoration: none;
+    font-size: 16px;  
+}
+.link-container li{
+    transition: 1s;
+}
+.link-container li:hover{
+    transform: skewX( -10deg ) translateX( 10px );
+}
